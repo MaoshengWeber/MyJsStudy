@@ -22,4 +22,10 @@ Math.ceil(floatNum);  //向上舍入，如传入参数带有小数则去掉小�
 Math.round(floatNum); //四舍五入，如传入参数带有小数则四舍五入
 Math.floor(floatNum); //向下舍入，如传入参数带有小数则去掉小数并不进位
 Math.random(); //取随机数，可能返回[0,1)之间的数
-
+function random( range ){ //传入一个数组（含两个数）计算返回一个随机中间值的函数
+	var max = Math.max( range[0], range[1] );
+	var min = Math.min( range[0], range[1] );
+	var diff = max - min;
+	var number = Math.ceil((Math.random()*diff+min));
+	return number;
+}
